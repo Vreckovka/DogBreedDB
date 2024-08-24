@@ -1,0 +1,46 @@
+<div class="breed-header">
+    <span class="bold">{{breed.name}}</span>
+
+    @if(isExpanded)
+    {
+    <button class="bold button close" (click)="collapse()">Close</button>
+
+    }
+    @else {
+    <button class="bold button show-more" (click)="expand()">Show more</button>
+    }
+
+</div>
+
+@if(isExpanded)
+{
+<div class="breed-description-container">
+    <img class="breed-image border-radius" [src]="breedImage?.url" />
+
+    <div>
+        @if(breed.description)
+        {
+        <span>{{breed.description}}</span>
+        }
+        @else{
+        <span>{{breed.bred_for}}&nbsp;</span>
+        <span>{{breed.temperament}}</span>
+        }
+
+        <div class="info">
+            @if(breed.life_span){
+            <div class="info-item">
+                <span class="label bold">Lifespan:</span>
+                <span>{{ breed.life_span }}</span>
+            </div>
+            }
+            @if(breed.origin){
+            <div class="info-item">
+                <span class="label bold">Origin:</span>
+                <span>{{ breed.origin }}</span>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+}

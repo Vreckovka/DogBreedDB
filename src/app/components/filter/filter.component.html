@@ -1,0 +1,10 @@
+<span class="bold medium-font-size">Filter by breed name</span>
+<input class="filter-input border-radius" type="search" placeholder="Breed name" [(ngModel)]="search" />
+
+<div *ngIf="(breeds | async | filter:search) as filteredBreeds">
+    <span class="bold medium-font-size">{{filteredBreeds.length}} results</span>
+
+    <div class="results-container">
+        <breed-result *ngFor="let breed of filteredBreeds" [breed]="breed" />
+    </div>
+</div>

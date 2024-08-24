@@ -1,0 +1,18 @@
+$small: 0.75rem;
+$medium: 0.875rem;
+
+
+@font-face {
+    font-family: 'GothamPro';
+    src: url("../fonts/GothamPro.ttf");
+    font-weight: 200;
+    font-style: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.medium-font-size {
+    font-size: $medium;
+}

@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import "app/styles/colors.scss";
+@import "app/styles/fonts.scss";
+@import "app/styles/common.scss";
+
+html {
+    background: $background;
+    color: $blue;
+    padding: 3.75rem;
+    line-height: 1.625rem;
+    font-family: GothamPro;
+
+    @media (max-width: $tablet) {
+        padding: 2.75rem 1rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

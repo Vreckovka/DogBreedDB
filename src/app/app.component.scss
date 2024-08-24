@@ -1,0 +1,20 @@
+:host {
+    max-width: 43.125rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.site-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.title-container {
+    max-width: 26.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
